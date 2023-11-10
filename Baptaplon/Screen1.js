@@ -31,6 +31,7 @@ function Screen1({navigation}){
             <Pressable style={styles.signupButton}>
                 <Text style={styles.signupText}>Tạo tài khoản mới</Text>
             </Pressable>
+            <Text style={styles.signupText}>Tạo tài khoản mới</Text>
         </View>
     )
 }
