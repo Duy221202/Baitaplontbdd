@@ -244,21 +244,33 @@ function Screen3({navigation}){
                 />
                 </View>
                 <View 
-                style={{flex:0.55,
+                style={{
                     backgroundColor:"dimgray", 
                     width:"90%",
                     justifyContent:"center",
                     borderRadius:10,
                     marginTop:"20px"
                     }}>
-                <View style={{flexDirection:"row", alignItems:"center"}}>
+                <View style={{flexDirection:"row", alignItems:"center",marginLeft:"10px"}}>
                 <Image source={require("./IMG/metaicon.png")} style={{width:"35px", height:'35px',borderRadius:20, alignItems:'flex-start'}}></Image>
                 <Text style={{color:"white", fontSize:"18px"}}>Meta</Text>
                 </View>
-                    <Text style={{color:"white", fontSize:"16px", fontWeight:"600"}}>Trung tâm tài khoản</Text>
-                    <Text style={{color:"white", fontSize:"14px"}}>Quản lý phần cài đặt tài khoản và trải nghiệm kết nối trên các công nghệ của Meta
+                    <Text style={{color:"white", fontSize:"16px", fontWeight:"600",marginLeft:"10px"}}>Trung tâm tài khoản</Text>
+                    <Text style={{color:"white", fontSize:"14px",marginLeft:"10px"}}>Quản lý phần cài đặt tài khoản và trải nghiệm kết nối trên các công nghệ của Meta
                     </Text>
-                    
+                <Pressable onPress={() => {
+                    navigation.navigate("Screen3_2")
+                }}>
+                    <View style={{flexDirection:"row",marginTop:"15px",marginLeft:"20px"}}>
+                        <Image source={require("./IMG/thontinicon.png")} style={{width:"30px",height:30,borderRadius:5}}/>
+                        <Text style={{color:"white"}}>Thông tin cá nhân</Text>
+                    </View>
+                    <View style={{flexDirection:"row",marginTop:"15px",marginLeft:"20px"}}>
+                        <Image source={require("./IMG/khienicon.png")} style={{width:"30px",height:30,borderRadius:5}}/>
+                        <Text style={{color:"white"}}>Mặt khẩu và bảo mật</Text>
+                    </View>
+                    <Text style={{color:"aqua",marginLeft:"10px",fontSize:"16px"}}>Xem thêm trong trung tâm tài khoản</Text>
+                </Pressable>
                 
                 </View>
             </View>
