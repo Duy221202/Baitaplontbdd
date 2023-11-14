@@ -75,7 +75,13 @@ function Screen2({}){
     return(
         <View style={{ flex:1 , justifyContent: 'center',backgroundColor:'black' }}>
             <View style={{flexDirection:"row",alignItems: "center"}}>
+                <Pressable
+                        onPress={() => {
+                            navigation.navigate("Screen3")
+                        }}    
+                >
                 <Image source={require("./IMG/avatar.png")} style={{width:"50px",height:"50px", borderRadius:"30px"}}/>
+                </Pressable>
                 <Text 
                     style={{color:'white',justifyContent:"center",textAlign:"center", marginLeft:"10px",fontSize:"20px",
                     fontWeight:'700'

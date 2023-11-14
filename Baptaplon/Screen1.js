@@ -8,7 +8,7 @@ function Screen1({navigation}){
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Tiếng Việt</Text>
-            <Image source={require('../On5/IMG/logomess.png')} style={styles.logo}/>
+            <Image source={require('../Baptaplon/IMG/logomess.png')} style={styles.logo}/>
             <View style={styles.inputContainer}>
                 <TextInput
                     style={styles.input}
