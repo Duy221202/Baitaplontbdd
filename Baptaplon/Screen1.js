@@ -1,29 +1,62 @@
-import * as React from "react";
-import { StyleSheet, Text, View, Image, Pressable, TextInput } from 'react-native';
+import  React ,{useEffect, useState} from "react";
+import { StyleSheet, Text, View, Image, Pressable, TextInput, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const url = "https://65530dca5449cfda0f2e09ca.mockapi.io/mes"
 
 const Stack = createNativeStackNavigator();
 function Screen1({navigation}){
+    const [tk, setTk] = useState('');
+    const [mk, setMk] = useState('');
+    const [data, setData] = useState();
+    const fetchData = ()=>{
+            fetch (url)
+            .then(Res => Res.json())
+            .then(json =>{
+                setData(json)
+                
+            })
+    };
+    useEffect (()=>{
+        fetchData();
+    },[])
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Tiếng Việt</Text>
             <Image source={require('../Baptaplon/IMG/logomess.png')} style={styles.logo}/>
             <View style={styles.inputContainer}>
+                {console.log(data)}
                 <TextInput
                     style={styles.input}
                     placeholder="Số di động hoặc email"
                     placeholderTextColor="rgba(0,0,0,0.5)"
+                    onChangeText={setTk}
+                    value={tk}
                 />
                 <TextInput
                     style={styles.input}
                     placeholder="Mật khẩu"
                     placeholderTextColor="rgba(0,0,0,0.5)"
+                    onChangeText={setMk}
+                    value={mk}
                 />
             </View>
             <Pressable
                 style={styles.loginButton}
-                onPress={() => navigation.navigate('Screen2')}
+                onPress={() => {
+                    const useTK = data.find((item)=> item.email === tk || item.sdt === tk);
+                    const useMK = data.find((item)=> item.mk === mk);
+                    if(useTK) {
+                       if(useMK){
+                        navigation.navigate('Screen2', {data : useTK});
+                       } else{
+                            console.log('Mật Khẩu không khớp !!!')
+                       }
+                    } else{
+                        console.log('Email hoặc Số điện thoại không đúng !!')
+                    }
+                }
+                }
             >
                 <Text style={styles.loginButtonText}>Đăng Nhập</Text>
             </Pressable>
