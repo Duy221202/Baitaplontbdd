@@ -13,19 +13,10 @@ function App() {
   return (
    <NavigationContainer>
     <Stack.Navigator>
-<<<<<<< HEAD
-   
-=======
-<<<<<<< HEAD
-    <Stack.Screen name='Screen2_1' component={Screen2_1}/>
-    <Stack.Screen name='Screen3_2' component={Screen3_2}/>
-    <Stack.Screen name='Screen3' component={Screen3} options={{headerShown:false}}/>
-=======
->>>>>>> 906c614112adec5743fbe9435156b82c87f70837
->>>>>>> b6bc6852e13f2c8bd0dfbed4e137097a2c8e63e4
     <Stack.Screen name='Screen1' component={Screen1} options={{headerShown:false}}/>
     <Stack.Screen name='Screen2' component={Screen2} options={{headerShown:false}}/>
     <Stack.Screen name='Screen3' component={Screen3} options={{headerShown:false}}/>
+    <Stack.Screen name='Screen2_1' component={Screen2_1}/>
     <Stack.Screen name='Screen3_2' component={Screen3_2}/>
     
     </Stack.Navigator>
