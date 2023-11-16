@@ -8,7 +8,7 @@ import {StyleSheet,
   ScrollView,
   Button,
 } from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer, useNavigation, useRoute } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 var array = [
@@ -93,13 +93,17 @@ var array3 = [
 
 const Stack = createNativeStackNavigator();
 
-function Screen3({navigation}){
-    var navigation = useNavigation();
+const Screen3 =({navigation}) =>{
+    
     var [state, setState] = React.useState(array);
     var [color , setColor] = React.useState(1);
     var [state2, setState] = React.useState(array2);
     var [state3, setState] = React.useState(array3);
     //const [searchTerm, setSearchTerm] = useState('');
+    const route = useRoute();
+    const { data } = route.params;
+    console.log(data);
+
   return(
     <ScrollView style={{ flex: 3, backgroundColor: 'black',height:"1080px" }}>
     <View style={ {backgroundColor:'black',width:"100%",justifyContent:"center",alignItems:"center"}}>
@@ -114,11 +118,11 @@ function Screen3({navigation}){
             <Text style={{color:"blue",left:"130px",fontSize:17}}> Xong </Text>
             </Pressable>
         </View>
-        <Image source={require("./IMG/avatar.png")} style={{width:"75px",height:"75px", borderRadius:"40px"}}/>
+        <Image source={{uri: data.avt}} style={{width:"75px",height:"75px", borderRadius:"40px"}}/>
         <Image source={require("./IMG/cameraicon.png")} style={{width:"20px",height:"20px", borderRadius:"40px",
             top:"-20px",left:"20px"
             }}/>
-        <Text style={{color:"white",fontWeight:"700",fontSize:18}}>Martin Radolph</Text>
+        <Text style={{color:"white",fontWeight:"700",fontSize:18}}>{data.LastName}</Text>
         </View>
 
         <View style={{ width:390,alignItems:"center",height:"1080px"}} >

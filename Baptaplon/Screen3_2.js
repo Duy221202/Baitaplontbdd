@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image,FlatList,Pressable } from 'react-native';
-import { NavigationContainer,useNavigation } from '@react-navigation/native';
+import { NavigationContainer,useNavigation, useRoute } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
@@ -44,9 +44,11 @@ var array = [
 ]
 
 const Stack = createNativeStackNavigator();
-function Screen3_2() {
-    var navigation = useNavigation();
-    var [state, setState] = React.useState(array);
+const Screen3_2 =()=> {
+    const route = useRoute();
+    const {data} = route.params;
+    const navigation = useNavigation();
+    const [state, setState] = React.useState(array);
     return (
         <View style={{ backgroundColor: "black", padding: 16,justifyContent:"center",alignItems:"center",height:720}}>
             <View style={{ flexDirection: "row"}}>
