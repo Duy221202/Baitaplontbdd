@@ -137,7 +137,10 @@ const Screen3 =({navigation}) =>{
                     return(
                         <Pressable
                         onPress={() => {
-                            //navigation.navigate('Screen3');
+                            if(item.name === "Chế độ tối"){
+                                
+                            }
+                            
                         }}
                         style={{
                             borderBottomWidth: 1,

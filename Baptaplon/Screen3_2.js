@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image,FlatList,Pressable } from 'react-native';
 import { NavigationContainer,useNavigation, useRoute } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Screen3 from './Screen3';
 
 
 var array = [
@@ -51,12 +52,19 @@ const Screen3_2 =()=> {
     const [state, setState] = React.useState(array);
     return (
         <View style={{ backgroundColor: "black", padding: 16,justifyContent:"center",alignItems:"center",height:720}}>
-            <View style={{ flexDirection: "row"}}>
+            <View style={{ flexDirection: "row",width:"100%",justifyContent:"space-between"}}>
+                <Pressable onPress={() => (
+                    navigation.navigate("Screen3")
+                )}>
+                <Text style={{color:"white" ,justifyContent:"flex-start",textAlign:"left"}}>X</Text>
+                </Pressable>
+                <View style={{flexDirection:"row",justifyContent:"center",alignItems:"center",left:"-150px"}}>
                 <Image
                     source={require("./IMG/metaicon.png")}
-                    style={{ width: 35, height: 35, borderRadius: 20 }}
+                    style={{ width: 35, height: 35, borderRadius: 20,justifyContent:"center",alignItems:"center"}}
                 />
                 <Text style={{ color: "white", fontSize: 18, marginLeft: 8 }}>Meta</Text>
+                </View>
             </View>
 
             <Text style={{ color: "white", fontSize: 20, fontWeight: "600" }}>
