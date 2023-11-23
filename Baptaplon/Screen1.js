@@ -1,20 +1,19 @@
 import  React ,{useEffect, useState} from "react";
-import { StyleSheet, Text, View, Image, Pressable, TextInput, Alert } from 'react-native';
+import { StyleSheet, Text, View, Image, Pressable, TextInput, } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const url = "https://65530dca5449cfda0f2e09ca.mockapi.io/mes"
 
 const Stack = createNativeStackNavigator();
-function Screen1({navigation}){
+const Screen1 =({navigation})=>{
     const [tk, setTk] = useState('');
     const [mk, setMk] = useState('');
-    const [data, setData] = useState();
+    const [data, setData] = useState([]);
     const fetchData = ()=>{
             fetch (url)
             .then(Res => Res.json())
             .then(json =>{
-                setData(json)
-                
+                setData(json) 
             })
     };
     useEffect (()=>{
@@ -44,11 +43,14 @@ function Screen1({navigation}){
             <Pressable
                 style={styles.loginButton}
                 onPress={() => {
-                    const useTK = data.find((item)=> item.email === tk || item.sdt === tk);
+                    const useData = data.find((item)=> item.email === tk || item.sdt === tk);
                     const useMK = data.find((item)=> item.mk === mk);
-                    if(useTK) {
+                    if(useData) {
                        if(useMK){
-                        navigation.navigate('Screen2', {data : useTK});
+                        navigation.navigate('Screen2', {data : useData});
+                        console.log('Data sent to Screen2:', user);
+                       
+                        console.log(data);
                        } else{
                             console.log('Mật Khẩu không khớp !!!')
                        }
