@@ -1,23 +1,63 @@
 // Screen2_1.js
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, Image, Button, TextInput, FlatList } from 'react-native';
-import { addMessage, getMessages } from './data'; // Đường dẫn tới file data.js
+import { View, Text, Image, Button, TextInput, FlatList,StyleSheet,Pressable } from 'react-native';
+
+const url = 'https://6558765ee93ca47020a95c37.mockapi.io/mess';
 
 const Screen2_1 = () => {
   const [message, setMessage] = useState('');
   const scrollViewRef = useRef();
+  const [data, setData] = useState([]);
+  const [newGhichu, setNewGhichu] = useState('');
 
-  const handleSendMessage = () => {
-    if (message.trim() !== '') {
-      addMessage(message);
-      setMessage('');
+  const fetchGhiChu = async () => {
+    try {
+      const response = await fetch(url);
+      const jsonData = await response.json();
+      setData(jsonData);
+    } catch (error) {
+      console.error('Error fetching notes:', error);
     }
   };
 
+  const addGhichu = async () => {
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ mess: newGhichu }),
+      });
+
+      if (response.ok) {
+        fetchGhiChu();
+        setNewGhichu('');
+      } else {
+        console.error('Error adding note:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error adding note:', error);
+    }
+  };
+
+
   useEffect(() => {
-    console.log('Messages updated:', getMessages());
-    scrollViewRef.current.scrollToEnd({ animated: true });
-  }, [getMessages()]);
+    fetchGhiChu();
+  }, []);
+
+
+
+  const renderItem = ({ item }) => (
+    <View style={styles.noteContainer}>
+      <Text style={styles.flat}>{item.mess}</Text>
+      <Pressable onPress={() => deleteGhichu(item.id)}>
+        <Text>Delete</Text>
+      </Pressable>
+
+    </View>
+  );
+
 
   return (
     <View style={{ backgroundColor: 'black', flex: 1 }}>
@@ -33,21 +73,14 @@ const Screen2_1 = () => {
           <Image source={require('./IMG/2_1callvideo.png')} style={{ width: '25px', height: '25px', marginLeft: '20px' }} />
         </View>
       </View>
-
-      <View style={{ flex: 1 }}>
+      <View style={{height:"480px",justifyContent:"flex-end", alignItems:"flex-end"}}>
         <FlatList
-          ref={scrollViewRef}
-          data={getMessages()}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => (
-            <View style={{ backgroundColor: 'blue', padding: 10, margin: 5, borderRadius: 5 }}>
-              <Text style={{ color: 'white' }}>{item}</Text>
-            </View>
-          )}
-          inverted={true}
+          style={{width:"180px"}}
+          data={data}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={renderItem}
         />
       </View>
-
       <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', height: 40 }}>
         <Image source={require('./IMG/2_1cham.png')} style={{ width: '25px', height: '25px' }} />
         <Image source={require('./IMG/2_1camera.png')} style={{ width: '25px', height: '25px' }} />
@@ -56,14 +89,55 @@ const Screen2_1 = () => {
         <TextInput
           placeholder='aa'
           style={{ backgroundColor: 'grey', borderRadius: '20px', flex: 1, marginHorizontal: 10, height: 30 }}
-          value={message}
-          onChangeText={(text) => setMessage(text)}
+          value={newGhichu}
+          onChangeText={(text) => setNewGhichu(text)}
         />
+        <Pressable style={styles.addButton} onPress={addGhichu}>
+        <Text style={styles.txtButton}>Add Note</Text>
+      </Pressable>
         <Image source={require('./IMG/2_1like.png')} style={{ width: '25px', height: '25px' }} />
-        <Button title="Send" onPress={handleSendMessage} />
       </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 16,
+  },
+  input:{
+    height: 50,
+    width: 360,
+    backgroundColor:"white",
+    borderColor:'orange',
+    borderWidth:1,
+    borderRadius: 10
+
+  },
+  noteContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    borderRadius: 10,
+    marginVertical: 10,
+    padding: 10,
+    backgroundColor: 'white',
+    borderColor:'orange',
+    borderWidth:1
+  },
+  addButton: {
+    backgroundColor: 'orange',
+    padding: 10,
+    borderRadius: 10,
+    marginTop: 10,
+    alignItems: 'center',
+  },
+  txtButton:{
+    color:'white'
+  },
+  flat:{
+    color:"orange"
+  }
+});
 
 export default Screen2_1;

@@ -199,7 +199,11 @@ function Screen2({}){
             </View>
                     <View style={{flexDirection:'row',justifyContent:"space-between"}}>
                         <Image source={require("./IMG/iconchat2.jpg")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
+                        <Pressable onPress={() => {
+                            navigation.navigate("Screen2_1call")
+                        }}>
                         <Image source={require("./IMG/videocall2.png")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
+                        </Pressable>
                         <Image source={require("./IMG/phonebook3.png")} style={{width:"40px",height:"40px",backgroundColor:'black'}}/>
                         <Image source={require("./IMG/tinkk.png")} style={{width:"40px",height:"40px",backgroundColor:'black'}}/>
                     </View>
