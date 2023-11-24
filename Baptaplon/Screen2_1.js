@@ -9,6 +9,7 @@ const Screen2_1 = () => {
   const scrollViewRef = useRef();
   const [data, setData] = useState([]);
   const [newGhichu, setNewGhichu] = useState('');
+  const [inputWidth, setInputWidth] = useState(30); // Initial width
 
   const fetchGhiChu = async () => {
     try {
@@ -33,6 +34,7 @@ const Screen2_1 = () => {
       if (response.ok) {
         fetchGhiChu();
         setNewGhichu('');
+        setInputWidth(30);
       } else {
         console.error('Error adding note:', response.statusText);
       }
@@ -47,12 +49,31 @@ const Screen2_1 = () => {
   }, []);
 
 
+  const deleteGhichu = async (id) => {
+    try {
+      const response = await fetch(`${url}/${id}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        fetchGhiChu();
+      } else {
+        console.error('Error deleting note:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error deleting note:', error);
+    }
+  };  
+  const handleInputChange = (text) => {
+    setNewGhichu(text);
+    setInputWidth(text.length * 10); // Adjust the width based on the length of the input
+  };
 
   const renderItem = ({ item }) => (
     <View style={styles.noteContainer}>
       <Text style={styles.flat}>{item.mess}</Text>
       <Pressable onPress={() => deleteGhichu(item.id)}>
-        <Text>Delete</Text>
+        <Text>Thu Hoi</Text>
       </Pressable>
 
     </View>
@@ -93,7 +114,7 @@ const Screen2_1 = () => {
           onChangeText={(text) => setNewGhichu(text)}
         />
         <Pressable style={styles.addButton} onPress={addGhichu}>
-        <Text style={styles.txtButton}>Add Note</Text>
+        <Text style={styles.txtButton}>Send</Text>
       </Pressable>
         <Image source={require('./IMG/2_1like.png')} style={{ width: '25px', height: '25px' }} />
       </View>
@@ -126,7 +147,7 @@ const styles = StyleSheet.create({
     borderWidth:1
   },
   addButton: {
-    backgroundColor: 'orange',
+    backgroundColor: 'blue',
     padding: 10,
     borderRadius: 10,
     marginTop: 10,
@@ -136,7 +157,7 @@ const styles = StyleSheet.create({
     color:'white'
   },
   flat:{
-    color:"orange"
+    color:"black"
   }
 });
 

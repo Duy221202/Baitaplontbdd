@@ -47,7 +47,6 @@ var array = [
 const Stack = createNativeStackNavigator();
 const Screen3_2 =()=> {
     const route = useRoute();
-    const {data} = route.params;
     const navigation = useNavigation();
     const [state, setState] = React.useState(array);
     return (
