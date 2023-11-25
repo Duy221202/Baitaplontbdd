@@ -66,7 +66,7 @@ const Screen2_1 = () => {
   };  
   const handleInputChange = (text) => {
     setNewGhichu(text);
-    setInputWidth(text.length * 10); // Adjust the width based on the length of the input
+    setInputWidth(text.length * 10); 
   };
 
   const renderItem = ({ item }) => (
@@ -83,7 +83,11 @@ const Screen2_1 = () => {
   return (
     <View style={{ backgroundColor: 'black', flex: 1 }}>
       <View style={{ flexDirection: 'row', alignItems: 'center', height: 70 }}>
+        <Pressable onPress={() => {
+          navigation.navigate("Screen2")
+        }}>
         <Image source={require('./IMG/2_1back.png')} style={{ width: '25px', height: '25px' }} />
+        </Pressable>
         <Image source={require('./IMG/Martin.png')} style={{ width: '50px', height: '50px', borderRadius: '30px', marginLeft: '20px' }} />
         <View style={{ flexDirection: 'column', marginLeft: '10px' }}>
           <Text style={{ color: 'white' }}>Martin Radolph</Text>

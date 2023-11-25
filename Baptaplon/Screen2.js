@@ -121,9 +121,9 @@ function Screen2({}) {
           />
         </View>
         <View style={{ flexDirection: 'row', justifyContent: "space-between" }}>
-          <Image source={require("./IMG/iconchat2.jpg")} style={{ width: 50, height: 50, backgroundColor: 'black' }} />
+          <Image source={require("./IMG/iconchati2.png")} style={{ width: 35, height: 35, backgroundColor: 'black' }} />
           <Pressable onPress={() => { navigation.navigate("Screen2_1call") }}>
-            <Image source={require("./IMG/videocall2.png")} style={{ width: 50, height: 50, backgroundColor: 'black' }} />
+            <Image source={require("./IMG/videocall3.png")} style={{ width: 35, height: 35, backgroundColor: 'black' }} />
           </Pressable>
           <Pressable onPress={() => { navigation.navigate("Screen2_2db") }}>
             <Image source={require("./IMG/phonebook3.png")} style={{ width: 40, height: 40, backgroundColor: 'black' }} />
