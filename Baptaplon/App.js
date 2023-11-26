@@ -17,7 +17,7 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
    <NavigationContainer>
-    <Stack.Navigator initialRouteName='Screen2_4tin'>
+    <Stack.Navigator>
     <Stack.Screen name='Screen1' component={Screen1} options={{headerShown:false}}/>
     <Stack.Screen name='Screen2_4tin' component={Screen2_4tin}/>
     <Stack.Screen name='Screen2user' component={Screen2user} options={{headerShown:false}}/>
