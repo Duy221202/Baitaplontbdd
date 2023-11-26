@@ -93,6 +93,31 @@ function Screen2({}) {
             value={searchTerm}
           />
         </View>
+        <View style={{}}>
+        <FlatList
+            numColumns={10}
+            data={state}
+            renderItem={({ item }) => (
+              <Pressable
+                onPress={() => {
+                   navigation.navigate('Screen2_1');
+                }}
+                style={{
+                  height: 90,
+                  width: '20%',
+                  borderRadius: 10,
+                  margin: 5,
+                  flexDirection: 'column',
+                  marginBottom: 30,
+                }}
+              >
+                <Image source={item.image} style={{ width: 75, height: 75, borderRadius: 100, alignItems: 'flex-start' }} />
+                <Text style={{ color: 'white', marginLeft: 10 }}>{item.name}</Text>
+              </Pressable>
+            )}
+            keyExtractor={(item, index) => index.toString()}
+          />
+        </View>
         <View style={{ flex: 8 }}>
           <FlatList
             numColumns={1}
