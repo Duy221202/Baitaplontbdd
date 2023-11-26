@@ -8,6 +8,7 @@ import Screen3_2 from '../Baptaplon/Screen3_2'
 import Screen2_1 from '../Baptaplon/Screen2_1'
 import Screen2_1call from '../Baptaplon/Screen2_1call'
 import Screen2_2db from '../Baptaplon/Screen2_2db'
+import Screen2user from '../Baptaplon/Screen2user';
 
 
 const Stack = createNativeStackNavigator();
@@ -16,6 +17,7 @@ function App() {
   return (
    <NavigationContainer>
     <Stack.Navigator >
+    <Stack.Screen name='Screen2user' component={Screen2user} options={{headerShown:false}}/>
     <Stack.Screen name='Screen1' component={Screen1} options={{headerShown:false}}/>
     <Stack.Screen name='Screen2' component={Screen2} options={{headerShown:false}}/>
     

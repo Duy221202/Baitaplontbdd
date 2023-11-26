@@ -84,7 +84,11 @@ const Screen2_1 = ({ navigation }) => {
         <Pressable onPress={() => { navigation.navigate("Screen2") }}>
           <Image source={require('./IMG/2_1back.png')} style={{ width: 25, height: 25 }} />
         </Pressable>
+        <Pressable onPress={() => {
+          navigation.navigate("Screen2user")
+        }}>
         <Image source={require('./IMG/Martin.png')} style={{ width: 50, height: 50, borderRadius: 30 }} />
+        </Pressable>
         <View style={{ flexDirection: 'column', marginLeft: 10 }}>
           <Text style={{ color: 'white' }}>Martin Radolph</Text>
           <Text style={{ color: 'grey' }}> Messenger</Text>
