@@ -153,7 +153,11 @@ function Screen2({}) {
           <Pressable onPress={() => { navigation.navigate("Screen2_2db") }}>
             <Image source={require("./IMG/phonebook3.png")} style={{ width: 40, height: 40, backgroundColor: 'black' }} />
           </Pressable>
+          <Pressable onPress={() => {
+            navigation.navigate("Screen2_4tin")
+          } }>
           <Image source={require("./IMG/tinkk.png")} style={{ width: 40, height: 40, backgroundColor: 'black' }} />
+          </Pressable>
         </View>
       </View>
     );

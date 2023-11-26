@@ -13,7 +13,7 @@ const url = 'https://6558765ee93ca47020a95c37.mockapi.io/mess';
 const Screen2_1 = ({ navigation }) => {
   const [data, setData] = useState([]);
   const [newGhichu, setNewGhichu] = useState('');
-
+  const [selectedNote, setSelectedNote] = useState(null);
   const fetchGhiChu = async () => {
     try {
       const response = await fetch(url);
@@ -72,9 +72,14 @@ const Screen2_1 = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <View style={styles.noteContainer}>
       <Text style={styles.flat}>{item.mess}</Text>
-      <Pressable onPress={() => deleteGhichu(item.id)}>
-        <Text>Thu Hoi</Text>
+      <Pressable onPress={() => setSelectedNote(selectedNote === item.id ? null : item.id)}>
+        <Text>...</Text>
       </Pressable>
+      {selectedNote === item.id && (
+        <Pressable onPress={() => deleteGhichu(item.id)}>
+          <Text style={{ color: 'red' }}>Thu Hoi</Text>
+        </Pressable>
+      )}
     </View>
   );
 
@@ -135,9 +140,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginVertical: 10,
     padding: 10,
-    backgroundColor: 'white',
+    backgroundColor: 'aqua',
     borderColor: 'orange',
     borderWidth: 1,
+    width:"auto"
   },
   addButton: {
     backgroundColor: 'blue',
