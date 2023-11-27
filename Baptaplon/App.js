@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Screen1 from '../Baptaplon/Screen1';
-import Screen2 from '../Baptaplon/Screen2'
-import Screen3 from '../Baptaplon/Screen3'
-import Screen3_2 from '../Baptaplon/Screen3_2'
-import Screen2_1 from '../Baptaplon/Screen2_1'
-import Screen2_1call from '../Baptaplon/Screen2_1call'
-import Screen2_2db from '../Baptaplon/Screen2_2db'
-import Screen2user from '../Baptaplon/Screen2user';
-import Screen2_4tin from '../Baptaplon/Screen2_4tin'
+import Screen1 from '../Baptaplon/Screen/Screen1';
+import Screen2 from '../Baptaplon/Screen/Screen2'
+import Screen3 from '../Baptaplon/Screen/Screen3'
+import Screen3_2 from '../Baptaplon/Screen/Screen3_2'
+import Screen2_1 from '../Baptaplon/Screen/Screen2_1'
+import Screen2_1call from '../Baptaplon/Screen/Screen2_1call'
+import Screen2_2db from '../Baptaplon/Screen/Screen2_2db'
+import Screen2user from '../Baptaplon/Screen/Screen2user';
+import Screen2_4tin from '../Baptaplon/Screen/Screen2_4tin'
 
 
 const Stack = createNativeStackNavigator();

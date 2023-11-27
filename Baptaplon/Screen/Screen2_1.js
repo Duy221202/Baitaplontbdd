@@ -87,20 +87,20 @@ const Screen2_1 = ({ navigation }) => {
     <View style={{ backgroundColor: 'black', flex: 1 }}>
       <View style={{ flexDirection: 'row', alignItems: 'center', height: 70 }}>
         <Pressable onPress={() => { navigation.navigate("Screen2") }}>
-          <Image source={require('./IMG/2_1back.png')} style={{ width: 25, height: 25 }} />
+          <Image source={require('../IMG/2_1back.png')} style={{ width: 25, height: 25 }} />
         </Pressable>
         <Pressable onPress={() => {
           navigation.navigate("Screen2user")
         }}>
-        <Image source={require('./IMG/Martin.png')} style={{ width: 50, height: 50, borderRadius: 30 }} />
+        <Image source={require('../IMG/Martin.png')} style={{ width: 50, height: 50, borderRadius: 30 }} />
         </Pressable>
         <View style={{ flexDirection: 'column', marginLeft: 10 }}>
           <Text style={{ color: 'white' }}>Martin Radolph</Text>
           <Text style={{ color: 'grey' }}> Messenger</Text>
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginLeft: 130 }}>
-          <Image source={require('./IMG/2_1call.png')} style={{ width: 25, height: 25 }} />
-          <Image source={require('./IMG/2_1callvideo.png')} style={{ width: 25, height: 25, marginLeft:5  }} />
+          <Image source={require('../IMG/2_1call.png')} style={{ width: 25, height: 25 }} />
+          <Image source={require('../IMG/2_1callvideo.png')} style={{ width: 25, height: 25, marginLeft:5  }} />
         </View>
       </View>
 
@@ -116,10 +116,10 @@ const Screen2_1 = ({ navigation }) => {
       </ScrollView>
 
       <View behavior='padding' style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', height: 40 }}>
-        <Image source={require('./IMG/2_1cham.png')} style={{ width: 25, height: 25 }} />
-        <Image source={require('./IMG/2_1camera.png')} style={{ width: 25, height: 25 }} />
-        <Image source={require('./IMG/2_1IMG.png')} style={{ width: 25, height: 25 }} />
-        <Image source={require('./IMG/2_1mic.png')} style={{ width: 25, height: 25 }} />
+        <Image source={require('../IMG/2_1cham.png')} style={{ width: 25, height: 25 }} />
+        <Image source={require('../IMG/2_1camera.png')} style={{ width: 25, height: 25 }} />
+        <Image source={require('../IMG/2_1IMG.png')} style={{ width: 25, height: 25 }} />
+        <Image source={require('../IMG/2_1mic.png')} style={{ width: 25, height: 25 }} />
         <TextInput
           placeholder='Type a message...'
           style={{ backgroundColor: 'grey', borderRadius: 20, flex: 1, marginHorizontal: 10, height: 30 }}
@@ -127,7 +127,7 @@ const Screen2_1 = ({ navigation }) => {
           onChangeText={handleInputChange}
           onSubmitEditing={addGhichu}
         />
-        <Image source={require('./IMG/2_1like.png')} style={{ width: 25, height: 25 }} />
+        <Image source={require('../IMG/2_1like.png')} style={{ width: 25, height: 25 }} />
       </View>
     </View>
   );

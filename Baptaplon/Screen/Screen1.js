@@ -22,7 +22,7 @@ const Screen1 =({navigation})=>{
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Tiếng Việt</Text>
-            <Image source={require('../Baptaplon/IMG/logomess.png')} style={styles.logo}/>
+            <Image source={require('../IMG/logomess.png')} style={styles.logo}/>
             <View style={styles.inputContainer}>
                 {console.log(data)}
                 <TextInput

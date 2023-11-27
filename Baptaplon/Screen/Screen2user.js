@@ -13,78 +13,78 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 var array = [
     {
-        image:require('./IMG/Ucd.png'),
+        image:require('../IMG/Ucd.png'),
         name:'Chủ đề',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/Ucx.png'),
+        image:require('../IMG/Ucx.png'),
         name:'Cảm xúc nhanh',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/Ubd.png'),
+        image:require('../IMG/Ubd.png'),
         name:'Biệt danh',
         show: '>',
         type: 'mountain',
     },
     {
-        image:require('./IMG/Utn.png'),
+        image:require('../IMG/Utn.png'),
         name:'Hiệu ứng từ ngữ',
         type: 'mountain',
     },
 ]
 var array2 = [
     {
-        image:require('./IMG/UG.png'),
+        image:require('../IMG/UG.png'),
         name:'Tạo nhóm chat với Martin',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/Useen.png'),
+        image:require('../IMG/Useen.png'),
         name:'Xem file phương tiện, file liên kết',
         show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/Ughim.png'),
+        image:require('../IMG/Ughim.png'),
         name:'Tin nhắn đã ghim',
         show: '>',
         type: 'mountain',
     },
     {
-        image:require('./IMG/Ulock.png'),
+        image:require('../IMG/Ulock.png'),
         name:'Đi đến cuộc trò truyện bí mật',
         type: 'mountain',
     },
     {
-        image:require('./IMG/Usreach.png'),
+        image:require('../IMG/Usreach.png'),
         name:'Tìm kiếm trong cuộc trò chuyện',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/Utb.png'),
+        image:require('../IMG/Utb.png'),
         name:'Thông báo & âm thanh',
         show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/Ucs.png'),
+        image:require('../IMG/Ucs.png'),
         name:'Chia sẽ thông tin liên hệ',
         type: 'roadbike',
     },
 ]
 var array3 = [
     {
-        image:require('./IMG/Uhc.png'),
+        image:require('../IMG/Uhc.png'),
         name:'Hạn chế',
     },
     {
-        image:require('./IMG/UC.png'),
+        image:require('../IMG/UC.png'),
         name:'Chặn',
     },
     {
-        image:require('./IMG/Ubc.png'),
+        image:require('../IMG/Ubc.png'),
         name:'Báo cáo',
         type: 'Đống góp ý kiến và báo cáo cuộc trò chuyện'
     },
@@ -109,19 +109,19 @@ const Screen2user =({navigation}) =>{
                     navigation.navigate("Screen2_1")
                 }}
             >
-            <Image source={require("./IMG/2_1back.png")} style={{width:"25px",height:"25px", borderRadius:"40px",marginBottom:"5px",top:"5px"}}/>
+            <Image source={require("../IMG/2_1back.png")} style={{width:"25px",height:"25px", borderRadius:"40px",marginBottom:"5px",top:"5px"}}/>
             </Pressable>
         </View>
-        <Image source={require("./IMG/Martin.png")} style={{width:"75px",height:"75px", borderRadius:"40px",marginBottom:"5px"}}/>
+        <Image source={require("../IMG/Martin.png")} style={{width:"75px",height:"75px", borderRadius:"40px",marginBottom:"5px"}}/>
         <Text style={{color:"white",fontWeight:"700",fontSize:18}}>Martin Radolph</Text>
         </View>
         <View style={{justifyContent:"center", alignItems:"center", flexDirection:"row", height:100}}>
             <View>
-                <Image source={require("./IMG/trangcanhan.png")} style={{height:40,width:40,borderRadius:50}}/>
+                <Image source={require("../IMG/trangcanhan.png")} style={{height:40,width:40,borderRadius:50}}/>
                 <Text style={{color:"white",right:"15px"}}>Trang cá nhân  </Text>
             </View>
             <View>
-                <Image source={require("./IMG/Usertb.png")} style={{height:40,width:40,borderRadius:50}}/>
+                <Image source={require("../IMG/Usertb.png")} style={{height:40,width:40,borderRadius:50}}/>
                 <Text style={{color:"white"}}>Thông báo  </Text>
             </View>
         </View>

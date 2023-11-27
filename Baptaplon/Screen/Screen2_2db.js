@@ -14,58 +14,58 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 var array = [
     {
-        image:require('./IMG/wibu.jpg'),
+        image:require('../IMG/wibu.jpg'),
         name:'Martin Radolph',
         des: 'Facebook',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/wibu2.jpg'),
+        image:require('../IMG/wibu2.jpg'),
         name:'Andrew Parker',
         des: 'Facebook',
         type: 'roadbike',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/karen.png'),
+        image:require('../IMG/karen.png'),
         name:'wibu1',
         des: 'Facebook',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/zeus.jpg'),
+        image:require('../IMG/zeus.jpg'),
         name:'T1 Zeus',
         des: 'Facebook',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/faker.jpg'),
+        image:require('../IMG/faker.jpg'),
         name:'Faker',
         des: 'Facebook',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/wibu3.jpg'),
+        image:require('../IMG/wibu3.jpg'),
         name:'T1 Keria',
         des: 'Facebook',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/Glenn.png'),
+        image:require('../IMG/Glenn.png'),
         name:'Glenn',
         des: 'Facebook',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/Glenn.png'),
+        image:require('../IMG/Glenn.png'),
         name:'Glenn',
         des: 'Facebook',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
 ]
 
@@ -134,18 +134,18 @@ function Screen2_2db({}){
                         <Pressable onPress={() => {
                             navigation.navigate("Screen2")
                         }}>
-                        <Image source={require("./IMG/iconchat2.jpg")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
+                        <Image source={require("../IMG/iconchat2.jpg")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
                         </Pressable>
                         <Pressable onPress={() => {
                             navigation.navigate("Screen2_1call")
                         }}>
-                        <Image source={require("./IMG/videocall2.png")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
+                        <Image source={require("../IMG/videocall2.png")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
                         </Pressable>
-                        <Image source={require("./IMG/phonebook3.png")} style={{width:"40px",height:"40px",backgroundColor:'black'}}/>
+                        <Image source={require("../IMG/phonebook3.png")} style={{width:"40px",height:"40px",backgroundColor:'black'}}/>
                         <Pressable onPress={() => {
                             navigation.navigate("Screen2_4tin")
                             } }>
-                        <Image source={require("./IMG/tinkk.png")} style={{ width: 40, height: 40, backgroundColor: 'black' }} />
+                        <Image source={require("../IMG/tinkk.png")} style={{ width: 40, height: 40, backgroundColor: 'black' }} />
                         </Pressable>
                     </View>
         </View>

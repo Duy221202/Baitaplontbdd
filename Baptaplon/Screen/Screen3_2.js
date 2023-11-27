@@ -7,37 +7,37 @@ import Screen3 from './Screen3';
 
 var array = [
     {
-        image:require('./IMG/tk.png'),
+        image:require('../IMG/tk.png'),
         name:'Tài khoản',
         show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/3_2tt.png'),
+        image:require('../IMG/3_2tt.png'),
         name:'Thông tin cá nhân',
         show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/3_2mk.png'),
+        image:require('../IMG/3_2mk.png'),
         name:'Mặt khẩu và bảo mặt',
         show: '>',
         type: 'mountain',
     },
     {
-        image:require('./IMG/3_2tt&q.png'),
+        image:require('../IMG/3_2tt&q.png'),
         name:'Thông tin và quyền của bạn',
         show: '>',
         type: 'mountain',
     },
     {
-        image:require('./IMG/3_2tuychon.png'),
+        image:require('../IMG/3_2tuychon.png'),
         name:'Tùy chọn quảng cáo',
         show: '>',
         type: 'mountain',
     },
     {
-        image:require('./IMG/3_2thanhtoan.png'),
+        image:require('../IMG/3_2thanhtoan.png'),
         name:'Thanh toán',
         show: '>',
         type: 'mountain',
@@ -59,7 +59,7 @@ const Screen3_2 =()=> {
                 </Pressable>
                 <View style={{flexDirection:"row",justifyContent:"center",alignItems:"center",left:"-150px"}}>
                 <Image
-                    source={require("./IMG/metaicon.png")}
+                    source={require("../IMG/metaicon.png")}
                     style={{ width: 35, height: 35, borderRadius: 20,justifyContent:"center",alignItems:"center"}}
                 />
                 <Text style={{ color: "white", fontSize: 18, marginLeft: 8 }}>Meta</Text>
@@ -75,14 +75,14 @@ const Screen3_2 =()=> {
             </Text>
             <View style={{backgroundColor:"slategray",width:"100%",borderRadius:"10px",height:"120px"}}>
                 <View style={{flexDirection:"row",marginLeft:"10px",borderBottomWidth:"1px",borderBottomColor:"grey",marginTop:"10px"}}>
-            <Image source={require("./IMG/avatar.png")} style={{width:"55px",height:"55px", borderRadius:"40px",marginBottom:"5px"}}/>
+            <Image source={require("../IMG/avatar.png")} style={{width:"55px",height:"55px", borderRadius:"40px",marginBottom:"5px"}}/>
                 <View style={{marginLeft:"15px",justifyContent:"center",alignItems:"center"}}>
                     <Text style={{color:"white"}}>Trang cá nhân</Text>
                     <Text style={{color:"darkgrey"}}>I Am batman</Text>
                 </View>
             </View>
                 <View style={{flexDirection:"row", marginTop:"10px",marginLeft:"10px"}}>
-                    <Image source={require("./IMG/trainghiemicon.png")} style={{height:25,width:25,borderRadius:"10px"}}/>
+                    <Image source={require("../IMG/trainghiemicon.png")} style={{height:25,width:25,borderRadius:"10px"}}/>
                     <Text style={{marginLeft:"15px",color:"white",fontSize:"16px"}}>Trãi nghiệm kết nối</Text>
                 </View>
             </View>

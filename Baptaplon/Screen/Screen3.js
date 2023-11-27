@@ -13,25 +13,25 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 var array = [
     {
-        image:require('./IMG/iconmattrang.png'),
+        image:require('../IMG/iconmattrang.png'),
         name:'Chế độ tối',
         show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/trangthai.png'),
+        image:require('../IMG/trangthai.png'),
         name:'Trạng thái hoạt động',
         show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/tronang.png'),
+        image:require('../IMG/tronang.png'),
         name:'Trợ năng',
         show: '>',
         type: 'mountain',
     },
     {
-        image:require('./IMG/quyenriengtu.png'),
+        image:require('../IMG/quyenriengtu.png'),
         name:'Quyền riêng tư & an toàn',
         show: '>',
         type: 'mountain',
@@ -39,25 +39,25 @@ var array = [
 ]
 var array2 = [
     {
-        image:require('./IMG/avataricon.png'),
+        image:require('../IMG/avataricon.png'),
         name:'Chế độ tối',
         show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/thongbao.png'),
+        image:require('../IMG/thongbao.png'),
         name:'Trạng thái hoạt động',
         show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/dondathang.png'),
+        image:require('../IMG/dondathang.png'),
         name:'Trợ năng',
         show: '>',
         type: 'mountain',
     },
     {
-        image:require('./IMG/a&file.png'),
+        image:require('../IMG/a&file.png'),
         name:'Quyền riêng tư & an toàn',
         show: '>',
         type: 'mountain',
@@ -65,25 +65,25 @@ var array2 = [
 ]
 var array3 = [
     {
-        image:require('./IMG/chuyentk.png'),
+        image:require('../IMG/chuyentk.png'),
         name:'Chuyển tài khoản',
         show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/baocao.png'),
+        image:require('../IMG/baocao.png'),
         name:'Báo cáo sự cố',
         //show: '>',
         type: 'roadbike',
     },
     {
-        image:require('./IMG/trogiup.png'),
+        image:require('../IMG/trogiup.png'),
         name:'Trợ năng',
         show: '>',
         type: 'mountain',
     },
     {
-        image:require('./IMG/phaply.png'),
+        image:require('../IMG/phaply.png'),
         name:'Pháp lý & chính sách',
         show: '>',
         type: 'mountain',
@@ -114,8 +114,8 @@ const Screen3 =({navigation}) =>{
             <Text style={{color:"blue",left:"130px",fontSize:17}}> Xong </Text>
             </Pressable>
         </View>
-        <Image source={require("./IMG/avatar.png")} style={{width:"55px",height:"55px", borderRadius:"40px",marginBottom:"5px"}}/>
-        <Image source={require("./IMG/cameraicon.png")} style={{width:"20px",height:"20px", borderRadius:"40px",
+        <Image source={require("../IMG/avatar.png")} style={{width:"55px",height:"55px", borderRadius:"40px",marginBottom:"5px"}}/>
+        <Image source={require("../IMG/cameraicon.png")} style={{width:"20px",height:"20px", borderRadius:"40px",
             top:"-20px",left:"20px"
             }}/>
         <Text style={{color:"white",fontWeight:"700",fontSize:18}}></Text>
@@ -168,7 +168,7 @@ const Screen3 =({navigation}) =>{
                 <View style={{ backgroundColor:"dimgray", width:"90%",justifyContent:"flex-start",
                         borderRadius:10,marginTop:"20px",flexDirection:"row",alignItems:"center"
                         }}>
-                <Image source={require("./IMG/giamsat.png")} style={{width:"35px",height:"35px", borderRadius:"40px"}}/>
+                <Image source={require("../IMG/giamsat.png")} style={{width:"35px",height:"35px", borderRadius:"40px"}}/>
                 <Text style={{color:"white",textAlign:"right"}}> Giám sát  </Text>
                 </View>
                 <View style={{ backgroundColor:"dimgray", width:"90%",justifyContent:"center",
@@ -255,7 +255,7 @@ const Screen3 =({navigation}) =>{
                     marginTop:"20px"
                     }}>
                 <View style={{flexDirection:"row", alignItems:"center",marginLeft:"10px"}}>
-                <Image source={require("./IMG/metaicon.png")} style={{width:"35px", height:'35px',borderRadius:20, alignItems:'flex-start'}}></Image>
+                <Image source={require("../IMG/metaicon.png")} style={{width:"35px", height:'35px',borderRadius:20, alignItems:'flex-start'}}></Image>
                 <Text style={{color:"white", fontSize:"18px"}}>Meta</Text>
                 </View>
                     <Text style={{color:"white", fontSize:"16px", fontWeight:"600",marginLeft:"10px"}}>Trung tâm tài khoản</Text>
@@ -265,11 +265,11 @@ const Screen3 =({navigation}) =>{
                     navigation.navigate("Screen3_2")
                 }}>
                     <View style={{flexDirection:"row",marginTop:"15px",marginLeft:"20px"}}>
-                        <Image source={require("./IMG/thontinicon.png")} style={{width:"30px",height:30,borderRadius:5}}/>
+                        <Image source={require("../IMG/thontinicon.png")} style={{width:"30px",height:30,borderRadius:5}}/>
                         <Text style={{color:"white"}}>Thông tin cá nhân</Text>
                     </View>
                     <View style={{flexDirection:"row",marginTop:"15px",marginLeft:"20px"}}>
-                        <Image source={require("./IMG/khienicon.png")} style={{width:"30px",height:30,borderRadius:5}}/>
+                        <Image source={require("../IMG/khienicon.png")} style={{width:"30px",height:30,borderRadius:5}}/>
                         <Text style={{color:"white"}}>Mặt khẩu và bảo mật</Text>
                     </View>
                     <Text style={{color:"aqua",marginLeft:"10px",fontSize:"16px"}}>Xem thêm trong trung tâm tài khoản</Text>

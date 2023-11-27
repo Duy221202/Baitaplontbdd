@@ -14,58 +14,58 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 var array = [
     {
-        image:require('./IMG/Martin.png'),
+        image:require('../IMG/Martin.png'),
         name:'Martin Radolph',
         des: ' Cuộc gọi đến - Thứ sáu ',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/andrew.png'),
+        image:require('../IMG/andrew.png'),
         name:'Andrew Parker',
         des: ' Cuộc gọi đến - Thứ sáu ',
         type: 'roadbike',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/karen.png'),
+        image:require('../IMG/karen.png'),
         name:'Karen Castillo',
         des: ' Cuộc gọi đến - Thứ năm ',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/maisy.png'),
+        image:require('../IMG/maisy.png'),
         name:'Maisy Humphrey',
         des: ' Cuộc gọi đến - Thứ tư ',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/Glenn.png'),
+        image:require('../IMG/Glenn.png'),
         name:'Glenn',
         des: ' Cuộc gọi đến - Thứ tư ',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/Glenn.png'),
+        image:require('../IMG/Glenn.png'),
         name:'Glenn',
         des: ' Cuộc gọi đi - Thứ ba ',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/Glenn.png'),
+        image:require('../IMG/Glenn.png'),
         name:'Glenn',
         des: ' Cuộc gọi đến - Thứ hai ',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
     {
-        image:require('./IMG/Glenn.png'),
+        image:require('../IMG/Glenn.png'),
         name:'Glenn',
         des: ' Cuộc gọi đi - Thứ hai ',
         type: 'mountain',
-        image2:require('./IMG/2_1callchamthan.png'),
+        image2:require('../IMG/2_1callchamthan.png'),
     },
 ]
 
@@ -87,9 +87,9 @@ function Screen2({}){
     return(
         <View style={{ flex:1 , justifyContent: 'center',backgroundColor:'black' }}>
             <View style={{flexDirection:"row", justifyContent:"space-between", width:"100%", marginLeft:"0px",height:"70px",alignItems:"center"}}>
-                <Image source={require("./IMG/2_1call11.png")} style={{height:"35px",width:"35px",marginLeft:"0px"}}/>
+                <Image source={require("../IMG/2_1call11.png")} style={{height:"35px",width:"35px",marginLeft:"0px"}}/>
                 <Text style={{color:"white" ,fontSize:"20px", fontWeight:"500"}}> Cuộc Gọi </Text>
-                <Image source={require("./IMG/2_1callvideo.png")} style={{height:"35px",width:"35px"}}/>
+                <Image source={require("../IMG/2_1callvideo.png")} style={{height:"35px",width:"35px"}}/>
             </View>
             <View style={{flex :8}}>
                 <FlatList
@@ -139,22 +139,22 @@ function Screen2({}){
                         <Pressable onPress={() => {
                             navigation.navigate("Screen2")
                         }}>
-                        <Image source={require("./IMG/iconchat2.jpg")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
+                        <Image source={require("../IMG/iconchat2.jpg")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
                         </Pressable>
                         <Pressable onPress={() => {
                             navigation.navigate("Screen2_1call")
                         }}>
-                        <Image source={require("./IMG/videocall2.png")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
+                        <Image source={require("../IMG/videocall2.png")} style={{width:"50px",height:"50px",backgroundColor:'black'}}/>
                         </Pressable>
                         <Pressable onPress={() => {
                             navigation.navigate("Screen2_2db")
                         }}>
-                        <Image source={require("./IMG/phonebook3.png")} style={{width:"40px",height:"40px",backgroundColor:'black'}}/>
+                        <Image source={require("../IMG/phonebook3.png")} style={{width:"40px",height:"40px",backgroundColor:'black'}}/>
                         </Pressable>
                         <Pressable onPress={() => {
                             navigation.navigate("Screen2_4tin")
                                 } }>
-                            <Image source={require("./IMG/tinkk.png")} style={{ width: 40, height: 40, backgroundColor: 'black' }} />
+                            <Image source={require("../IMG/tinkk.png")} style={{ width: 40, height: 40, backgroundColor: 'black' }} />
                         </Pressable>
                     </View>
         </View>
